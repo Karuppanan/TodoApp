@@ -1,0 +1,15 @@
+$app-border-color : #C5C5BC;
+
+.app {
+	background-color: #FFF;
+	border: solid 1px $app-border-color;
+	box-shadow: 0px 0px 5px $app-border-color;
+	--bs-gutter-y: 0.5rem;
+	margin-top: calc(var(--bs-gutter-y) * 5);
+}
+@media (max-width: 575px) {
+	.app {
+		--bs-gutter-y: 0;
+		margin-top: calc(var(--bs-gutter-y) * 5);
+	}
+}

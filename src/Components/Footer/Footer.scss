@@ -1,0 +1,76 @@
+@import './../../style/CommonSizes.scss';
+@import './../../style/primarycolors.scss';
+
+
+@mixin textItems(){
+	font-size: 20px;
+	vertical-align: middle;
+	cursor: pointer;
+	&:hover .tooltiptext {
+		visibility: visible;
+	}
+}
+
+.footer {
+	background-color: $footerColor;
+	padding: 10px;
+	padding-left: $padding-size ;
+	padding-right: $padding-size ;
+	border-top: solid 1px $footerColor;
+	& .add-text {
+		@include textItems()
+	}
+	& .search-text {
+		@include  textItems();
+		color: $searchTxtColor;
+	}
+	& .items-col{
+		border-left: solid 2px $pipecolor;
+		& .items-left {
+			vertical-align: sub;
+		}
+	}
+	& .menu-options {
+		cursor: pointer;
+		& .active {
+			border: solid 1px $activeBtnColor;
+			border-radius: 5px;
+			font-weight: 500;
+		}
+	}
+}
+
+.tooltiptext {
+	visibility: hidden;
+	width: 80px;
+	background-color: black;
+	color: #FFF;
+	text-align: center;
+	border-radius: 10px;
+	position: absolute;
+	z-index: 1;
+	margin-top: -20px;
+	margin-left: -40px;
+	font-size: 14px
+}
+
+
+@media (max-width: 575px) {
+	.footer {
+		padding-left: $padding-size - $media-padding;;
+		padding-right: $padding-size - $media-padding;;
+		& .menu-options {
+			margin-top: 10px;
+		}
+		& .items-col {
+			border-left: solid 0px !important;
+			margin-top: 5px;
+		}
+	}
+
+}
+@media (max-width: 990px) {
+	.menu-options {
+		margin-top: 10px;
+	}
+}

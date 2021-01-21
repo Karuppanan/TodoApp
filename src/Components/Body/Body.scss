@@ -1,0 +1,37 @@
+@import './../../style/CommonSizes.scss';
+@import './../../style/primarycolors.scss';
+
+$padding-size-top-bottom : 5px;
+
+.app-body {
+	padding-left: $padding-size;
+	padding-right: $padding-size;
+	max-height: 50vh;
+    overflow-y: auto;
+}
+
+.item-row {
+    padding-top: $padding-size-top-bottom;
+    padding-bottom: $padding-size-top-bottom;
+    border-bottom: solid 1px $pipecolor;
+    &:last-child {
+        border-bottom: 0px;
+    }
+}
+
+.strike-out {
+	text-decoration: line-through;
+	font-size: $custom-font-size;
+	color : $searchTxtColor
+}
+
+.row-text {
+	font-size: $custom-font-size;
+}
+
+@media (max-width: 575px) {
+	.app-body {
+		padding-left: $padding-size - $media-padding;
+		padding-right: $padding-size - $media-padding;
+	}
+}

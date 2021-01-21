@@ -1,0 +1,19 @@
+@import './../../../style/CommonSizes.scss';
+
+$checkbox-disable-color : #666;
+$checkbox-border-color : #86B7FE;
+
+.custom-checkbox {
+	cursor: pointer;
+	width: $custom-font-size;
+	height: $custom-font-size;
+	&:hover {
+		border-color: $checkbox-border-color;
+		outline: 0;
+		box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, .25);
+	}
+	&:disabled {
+		background: $checkbox-disable-color;
+		border-color:$checkbox-disable-color;
+	}
+}
